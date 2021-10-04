@@ -31,7 +31,7 @@ startBtn.addEventListener("click", function () {
 });
 
 function startQuiz() {
-  quizDiv.style.display = "block";
+  quizDiv.style.display = "flex";
   // var answerA = document.forms["question"]["choiceA"];
   // var answerB = document.forms["question"]["choiceB"];
 

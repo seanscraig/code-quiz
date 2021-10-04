@@ -1,0 +1,35 @@
+/* :root {
+    --primary: black;
+    --secondary:
+    --dark:
+    --light:
+} */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.main {
+    display: flex;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.welcome h1 {
+    justify-content: center;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
