@@ -13,9 +13,12 @@ header{
 
 .main {
     display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 1rem 1.5rem;
 }
 
-.welcome{
+.start{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,13 +26,25 @@ header{
     line-height: 1.5;
 }
 
-.welcome h1 {
+.start h1 {
     justify-content: center;
 }
 
-.quiz {
+.questions {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.end-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
 }

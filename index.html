@@ -12,38 +12,33 @@
   <body>
     <header>
       <a href="highscores.html" id="highscore-link">View Highscores</a>
-      <h2 id="timeLabel">Time: <span id="timer"></span></h2>
+      <h2 class="timer">Time: <span id="time">0</span></h2>
     </header>
 
     <div class="main">
-      <div class="welcome">
+      <div id="start-screen" class="start">
         <h1>JavaScript Coding Quiz</h1>
-        <br />
-        <h2>
+        <p>
           Try to answer the following code-related questions within the time
           limit. Keep in ming that incorrect answers will penalize tour
           score/time by 10 seconds.
-        </h2>
-        <br />
+        </p>
         <button id="startBtn">Start Quiz</button>
       </div>
-    </div>
 
-    <div class="quiz">
-      <h1>JavaScript is a ___________ language.</h1>
-      <br />
-      <form name="question">
-        <input type="radio" name="choice" value="Scripting" />Scripting
-        <br />
-        <input type="radio" name="choice" value="Programming" />Programming
-        <br />
-        <input type="radio" name="choice" value="Application" />Application
-        <br />
-        <input type="radio" name="choice" value="None of These" />None of These
-        <br />
-        <!-- <input type="submit" value="Submit"> -->
-        <button id="submitBtn">Submit Answer</button>
-      </form>
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is: <span id="final-score"></span></p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submitBtn">Submit</button>
+        </p>
+      </div>
     </div>
 
     <script src="./assets/js/quiz.js"></script>
