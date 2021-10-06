@@ -113,11 +113,13 @@ function submitHighScore() {
     initials: $initialsEl.value,
     score: score
   }
-  if (initials == "") {
+  if (initials === "") {
     alert("Please enter your initials");
+    return;
   } else {
     alert("Success!");
     localStorage.setItem("user", JSON.stringify(user));
+    window.location.href = "highscores.html";
   }
 }
 
