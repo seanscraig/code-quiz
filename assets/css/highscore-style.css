@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+ul {
+  padding: 1rem;
+}

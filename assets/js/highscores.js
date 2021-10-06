@@ -9,13 +9,14 @@ function goBack(){
 }
 
 function clearScores(){
-    // localStorage.clear();
-    // location.reload();
+    localStorage.clear();
+    location.reload();
 }
 
 function renderScores() {
     // console.log("render");
     // var storedHighScores = JSON.parse(localStorage.getItem("user"));
+    // console.log(storedHighScores);
     // for (var i = 0; i < storedHighScores.length; i++){
     //     console.log("in for");
     //     var currentHighScore = storedHighScores[i];

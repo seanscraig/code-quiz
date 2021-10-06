@@ -68,7 +68,7 @@ function questionClick(event) {
   // Capture the input 
   // Validate it
   var choice = event.target;
-
+  $resultsDiv.innerHTML = "";
   if (choice.textContent === questionsArr[currentQuestionIndex].answer){
     var $correctEl = document.createElement("h2");
     $correctEl.textContent = "Correct!";

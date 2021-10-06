@@ -49,3 +49,8 @@ header{
     align-items: center;
     line-height: 1.5;
 }
+
+#result {
+    display: flex;
+    justify-content: center;
+}
