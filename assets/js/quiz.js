@@ -1,10 +1,13 @@
 var $startScreenDiv = document.getElementById("start-screen");
 var $questionsDiv = document.getElementById("questions");
 var $endScreenDiv = document.getElementById("end-screen");
+var $choicesDiv = document.getElementById("choices");
+var $resultsDiv = document.getElementById("result");
 var $timerEl = document.getElementById("time");
 var $questionTitle = document.getElementById("question-title");
-var $choicesDiv = document.getElementById("choices");
+
 var $finalScoreEl = document.getElementById("final-score");
+var $initialsEl = document.getElementById("initials");
 
 var startBtn = document.getElementById("startBtn");
 var submitBtn = document.getElementById("submitBtn");
@@ -29,7 +32,7 @@ var questionsArr = [
   {
     title: "String values must be enclosed within ______ when being assigned to variables",
     choices: ["commas", "curly brackets", "quotes", "parentheses"],
-    answer: "parentheses"
+    answer: "quotes"
   }
 ];
 
@@ -50,7 +53,6 @@ function startQuiz() {
 
 function getQuestion() {
   // Get questions and stuff
-  console.log("Current Index: "+currentQuestionIndex+" ,Questions: "+questionsArr.length);
   $questionTitle.textContent = questionsArr[currentQuestionIndex].title;
   $choicesDiv.innerHTML = "";
   for (var i = 0; i < 4; i++){
@@ -71,12 +73,14 @@ function questionClick(event) {
     var $correctEl = document.createElement("h2");
     $correctEl.textContent = "Correct!";
     $correctEl.style.color = "green";
-    $questionsDiv.appendChild($correctEl);
-    console.log("correct");
+    $resultsDiv.appendChild($correctEl);
   }
   else {
     secondsLeft -= 10;
-    console.log("wrong");
+    var $wrongEl = document.createElement("h2");
+    $wrongEl.textContent = "Wrong!";
+    $wrongEl.style.color = "red";
+    $resultsDiv.appendChild($wrongEl);
   }
 
   currentQuestionIndex++;
@@ -91,9 +95,7 @@ function questionClick(event) {
 function gameOver(){
   $questionsDiv.className = "hide";
   $endScreenDiv.className = "end-screen";
-  console.log("seconds left: " + secondsLeft);
   score = secondsLeft;
-  console.log("score: "+ score);
   $finalScoreEl.textContent = score;
   clearInterval(timeInterval);
 }
@@ -107,7 +109,16 @@ function clockTick() {
 }
 
 function submitHighScore() {
-
+  var user = {
+    initials: $initialsEl.value,
+    score: score
+  }
+  if (initials == "") {
+    alert("Please enter your initials");
+  } else {
+    alert("Success!");
+    localStorage.setItem("user", JSON.stringify(user));
+  }
 }
 
 submitBtn.onclick = submitHighScore;
