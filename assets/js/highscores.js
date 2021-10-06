@@ -27,18 +27,7 @@ function renderScores() {
     }
 }
 
-function init(){
-    
-    // console.log(storedHighScores);
-
-    // if (storedHighScores !== null) {
-        // highScores = storedHighScores;
-    // }
-
-    renderScores();
-}
-
-init();
+renderScores();
 
 backBtn.addEventListener("click", goBack);
 clearBtn.addEventListener("click", clearScores);
