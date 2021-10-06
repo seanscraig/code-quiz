@@ -9,22 +9,22 @@ function goBack(){
 }
 
 function clearScores(){
-    localStorage.clear();
-    location.reload();
+    // localStorage.clear();
+    // location.reload();
 }
 
 function renderScores() {
-    console.log("render");
-    var storedHighScores = JSON.parse(localStorage.getItem("user"));
-    for (var i = 0; i < storedHighScores.length; i++){
-        console.log("in for");
-        var currentHighScore = storedHighScores[i];
-        console.log(currentHighScore);
-        var $highScoreLi = document.createElement("li");
-        $highScoreLi.textContent = todo
+    // console.log("render");
+    // var storedHighScores = JSON.parse(localStorage.getItem("user"));
+    // for (var i = 0; i < storedHighScores.length; i++){
+    //     console.log("in for");
+    //     var currentHighScore = storedHighScores[i];
+    //     console.log(currentHighScore);
+    //     var $highScoreLi = document.createElement("li");
+    //     $highScoreLi.textContent = todo
         
-        $highScoresList.appendChild($highScoreLi);
-    }
+    //     $highScoresList.appendChild($highScoreLi);
+    // }
 }
 
 renderScores();
