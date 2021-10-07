@@ -18,17 +18,22 @@ header{
     margin: 1rem 1.5rem;
 }
 
-.start{
+.start {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     line-height: 1.5;
-    margin: 3rem;
+    margin: 3rem 10rem;
 }
 
 .start h1 {
     justify-content: center;
+}
+
+.start p {
+    padding: 1rem;
 }
 
 .questions {
@@ -36,6 +41,10 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.questions h2 {
+    padding: 1rem;
 }
 
 .hide {
@@ -50,7 +59,20 @@ header{
     line-height: 1.5;
 }
 
+.btn {
+    padding: .5rem 1rem;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+    flex-direction: column;
+    /* align-items: normal; */
+}
+
 #result {
     display: flex;
     justify-content: center;
 }
+
